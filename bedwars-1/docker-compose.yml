@@ -1,0 +1,11 @@
+# https://polymart.org/resource/free-bedwars-setup-cxstudios.4343
+
+services:
+  java:
+    image: eclipse-temurin:11
+    ports:
+      - 25565:8578
+    volumes:
+      - ./SERVER-FILES:/opt/app
+    working_dir: /opt/app
+    command: ["java", "-Dfile.encoding=UTF-8", "-Xms2G", "-Xmx2G", "-jar", "server.jar"]
